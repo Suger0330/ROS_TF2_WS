@@ -934,6 +934,45 @@ tfs_sub_c/fast:
 	$(MAKE) -f tf2_tfs/CMakeFiles/tfs_sub_c.dir/build.make tf2_tfs/CMakeFiles/tfs_sub_c.dir/build
 .PHONY : tfs_sub_c/fast
 
+#=============================================================================
+# Target rules for targets named control_turtle2_c
+
+# Build rule for target.
+control_turtle2_c: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 control_turtle2_c
+.PHONY : control_turtle2_c
+
+# fast build rule for target.
+control_turtle2_c/fast:
+	$(MAKE) -f tf2_practice/CMakeFiles/control_turtle2_c.dir/build.make tf2_practice/CMakeFiles/control_turtle2_c.dir/build
+.PHONY : control_turtle2_c/fast
+
+#=============================================================================
+# Target rules for targets named pub_turtle_c
+
+# Build rule for target.
+pub_turtle_c: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pub_turtle_c
+.PHONY : pub_turtle_c
+
+# fast build rule for target.
+pub_turtle_c/fast:
+	$(MAKE) -f tf2_practice/CMakeFiles/pub_turtle_c.dir/build.make tf2_practice/CMakeFiles/pub_turtle_c.dir/build
+.PHONY : pub_turtle_c/fast
+
+#=============================================================================
+# Target rules for targets named turtle2_c
+
+# Build rule for target.
+turtle2_c: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 turtle2_c
+.PHONY : turtle2_c
+
+# fast build rule for target.
+turtle2_c/fast:
+	$(MAKE) -f tf2_practice/CMakeFiles/turtle2_c.dir/build.make tf2_practice/CMakeFiles/turtle2_c.dir/build
+.PHONY : turtle2_c/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1006,6 +1045,9 @@ help:
 	@echo "... tf2_static_sub_c"
 	@echo "... tf2_static_pub_c"
 	@echo "... tfs_sub_c"
+	@echo "... control_turtle2_c"
+	@echo "... pub_turtle_c"
+	@echo "... turtle2_c"
 .PHONY : help
 
 

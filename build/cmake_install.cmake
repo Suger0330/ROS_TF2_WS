@@ -134,6 +134,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/lxm/rostf2_ws/build/tf2_dynamic/cmake_install.cmake")
   include("/home/lxm/rostf2_ws/build/tf2_static/cmake_install.cmake")
   include("/home/lxm/rostf2_ws/build/tf2_tfs/cmake_install.cmake")
+  include("/home/lxm/rostf2_ws/build/tf2_practice/cmake_install.cmake")
 
 endif()
 
