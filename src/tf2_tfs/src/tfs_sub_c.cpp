@@ -49,10 +49,9 @@ int main(int argc, char *argv[])
                 参数2:源坐标系    A
                 参数3:ros::Time(0) 取间隔最短的两个坐标关系帧计算相对关系
                 返回值:geometry msgs::TransformStamped 源相对于目标坐标系的相对关系
-
             */
             //--解析 son1 中的点相对于 son2 的坐标
-            geometry_msgs::TransformStamped son1Toson2 =  buffer.lookupTransform("son2","son1",ros::Time(0));
+            geometry_msgs::TransformStamped son1Toson2 = buffer.lookupTransform("son2","son1",ros::Time(0));
             ROS_INFO("Son1 相对于 Son2 的坐标关系:父坐标系ID=%s",son1Toson2.header.frame_id.c_str());// son2
             ROS_INFO("Son1 相对于 Son2 的坐标关系:子坐标系ID=%s",son1Toson2.child_frame_id.c_str());// son1
             ROS_INFO("Son1 相对于 Son2 的坐标关系:x=%.2f,y=%.2f,z=%.2f",
