@@ -1,10 +1,10 @@
 # ROStf2_WS
 ## tf2_static
-/src 
-/scripts
+* /src
+* /scripts
 ## tf2_dynamic
-/src 
-/scripts
+* /src
+* /scripts
 ## tf2_tfs
-/src 
-/scripts
+* /src
+* /scripts
