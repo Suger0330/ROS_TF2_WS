@@ -921,6 +921,19 @@ tf2_static_pub_c/fast:
 	$(MAKE) -f tf2_static/CMakeFiles/tf2_static_pub_c.dir/build.make tf2_static/CMakeFiles/tf2_static_pub_c.dir/build
 .PHONY : tf2_static_pub_c/fast
 
+#=============================================================================
+# Target rules for targets named tfs_sub_c
+
+# Build rule for target.
+tfs_sub_c: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tfs_sub_c
+.PHONY : tfs_sub_c
+
+# fast build rule for target.
+tfs_sub_c/fast:
+	$(MAKE) -f tf2_tfs/CMakeFiles/tfs_sub_c.dir/build.make tf2_tfs/CMakeFiles/tfs_sub_c.dir/build
+.PHONY : tfs_sub_c/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -992,6 +1005,7 @@ help:
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... tf2_static_sub_c"
 	@echo "... tf2_static_pub_c"
+	@echo "... tfs_sub_c"
 .PHONY : help
 
 

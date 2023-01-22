@@ -76,5 +76,6 @@
     "python.analysis.extraPaths": [
         "/home/lxm/commun_ws/devel/lib/python3/dist-packages",
         "/opt/ros/noetic/lib/python3/dist-packages"
-    ]
+    ],
+    "cmake.sourceDirectory": "${workspaceFolder}/src/tf2_dynamic"
 }

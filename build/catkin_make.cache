@@ -1,2 +1,2 @@
-tf2_dynamic:tf2_static
+tf2_dynamic:tf2_static:tf2_tfs
 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCATKIN_DEVEL_PREFIX=/home/lxm/rostf2_ws/devel -DCMAKE_INSTALL_PREFIX=/home/lxm/rostf2_ws/install -G Unix Makefiles
