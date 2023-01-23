@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
     */
     if (argc !=2)
     {
-        ROS_ERROR("请传入一个参数！！");
+        ROS_ERROR("请传入一个参数！");
         return 1;
     }
     else

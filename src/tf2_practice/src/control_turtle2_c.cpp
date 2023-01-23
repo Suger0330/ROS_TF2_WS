@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     ros::Publisher pub_v = nh.advertise<geometry_msgs::Twist>("/turtle2/cmd_vel",100);
     // 4.编写解析逻辑;
 
-    ros::Rate rate(5);
+    ros::Rate rate(1);
     while (ros::ok())
     {
         
@@ -49,21 +49,21 @@ int main(int argc, char *argv[])
                 返回值:geometry msgs::TransformStamped 源相对于目标坐标系的相对关系
             */
             //--解析 turtle1 中的点相对于 turtle2 的坐标
-            geometry_msgs::TransformStamped t1Tot2 = buffer.lookupTransform("turtle2","turtle1",ros::Time(0));
-            // ROS_INFO("turtle1 相对于 turtle2 的坐标关系:父坐标系ID=%s",t1Tot2.header.frame_id.c_str());// turtle2
-            // ROS_INFO("turtle1 相对于 turtle2 的坐标关系:子坐标系ID=%s",t1Tot2.child_frame_id.c_str());// turtle1
-            // ROS_INFO("turtle1 相对于 turtle2 的坐标关系:x=%.2f,y=%.2f,z=%.2f",
-            //             t1Tot2.transform.translation.x,
-            //             t1Tot2.transform.translation.y,
-            //             t1Tot2.transform.translation.z
-            //         );
+            geometry_msgs::TransformStamped t1Tot2 = buffer.lookupTransform("turtle2","turtle1",ros::Time(0),ros::Duration(3));
+            ROS_INFO("turtle1 相对于 turtle2 的坐标关系:父坐标系ID=%s",t1Tot2.header.frame_id.c_str());// turtle2
+            ROS_INFO("turtle1 相对于 turtle2 的坐标关系:子坐标系ID=%s",t1Tot2.child_frame_id.c_str());// turtle1
+            ROS_INFO("turtle1 相对于 turtle2 的坐标关系:x=%.2f,y=%.2f,z=%.2f",
+                        t1Tot2.transform.translation.x,
+                        t1Tot2.transform.translation.y,
+                        t1Tot2.transform.translation.z
+                     );
             
             // B.根据相对计算并组织速度消息
             geometry_msgs::Twist twist;
             /*
                 组织速度,只需要设置线速度的x与角速度的z
                 linear.x = 系数 * (y^2+x^2)^(0.5)
-                angular.z = 系数 * arctan(对迅,邻边)
+                angular.z = 系数 * atan2(对边,邻边)
             */
             twist.linear.x = 0.5 * sqrt(pow(t1Tot2.transform.translation.x,2) + pow(t1Tot2.transform.translation.y,2));
             twist.angular.z = 4 * atan2(t1Tot2.transform.translation.y,t1Tot2.transform.translation.x);

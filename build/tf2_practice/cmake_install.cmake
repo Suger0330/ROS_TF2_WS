@@ -52,3 +52,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tf2_practice" TYPE FILE FILES "/home/lxm/rostf2_ws/src/tf2_practice/package.xml")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/tf2_practice" TYPE PROGRAM FILES "/home/lxm/rostf2_ws/build/tf2_practice/catkin_generated/installspace/turtle2_p.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/tf2_practice" TYPE PROGRAM FILES "/home/lxm/rostf2_ws/build/tf2_practice/catkin_generated/installspace/pub_turtle_p.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/tf2_practice" TYPE PROGRAM FILES "/home/lxm/rostf2_ws/build/tf2_practice/catkin_generated/installspace/control_turtle2_p.py")
+endif()
+
